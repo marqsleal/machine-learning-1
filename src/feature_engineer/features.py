@@ -1,3 +1,38 @@
+"""
+Este script realiza a preparação e o enriquecimento de dados para análise de concessão de crédito. Ele carrega um 
+dataset, padroniza nomes de colunas, cria novas variáveis e trata valores infinitos. Ao final, salva o dataset com 
+as novas variáveis para uso posterior.
+
+Passos detalhados:
+1. Carregamento dos dados: Lê o dataset de dados de empréstimo de um arquivo CSV e captura erros de leitura.
+2. Padronização de colunas: Renomeia colunas para formatos consistentes e acessíveis, tratando eventuais erros.
+3. Criação de novas features: 
+    - Converte valores negativos de experiência em zero.
+    - Cria as seguintes variáveis:
+        - `age_bracket`: Classifica a idade em faixas etárias.
+        - `age_bracket_name`: Converte a faixa etária para nome de geração.
+        - `income_per_family_member`: Calcula a renda por membro da família.
+        - `cc_to_income_ratio`: Calcula a relação entre média de gastos no cartão de crédito e a renda.
+        - `debt_to_income_ratio`: Calcula a relação dívida-renda somando a média do cartão e hipoteca.
+        - `financial_maturity_index`: Índice baseado na relação entre renda e gastos no cartão.
+4. Tratamento de valores infinitos: Substitui valores infinitos por NaN e remove linhas com valores ausentes.
+5. Salvamento do dataset: Salva o dataset com as novas features em um CSV.
+
+Erros tratados:
+- Erro 001: Erro ao carregar os dados.
+- Erro 002: Erro ao padronizar as colunas.
+- Erro 003: Erro ao criar novas features.
+- Erro 004: Erro ao tratar valores infinitos.
+
+Saída:
+O dataset com as novas variáveis é salvo no diretório `data/feature_store/data_with_new_features.csv`.
+
+Bibliotecas necessárias:
+- pandas
+- numpy
+"""
+
+
 import pandas as pd
 import numpy as np
 
