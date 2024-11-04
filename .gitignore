@@ -5,7 +5,6 @@
 .DS_Store
 
 Dockerfile
-Instruções.md
 
 # vim
 *.swp
