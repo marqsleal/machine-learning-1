@@ -41,7 +41,7 @@ import numpy as np
 
 try:
     df = pd.read_csv('data/external/bankloan.csv')
-    print('Dados carregados com sucesso.')
+    print('Step 1/4 - Dados carregados com sucesso.')
 except Exception as load_error:
     print('{}: Erro ao caregar os dados. Erro tipo 001.'.format(load_error))
 
@@ -66,7 +66,7 @@ try:
                     }
 
     df = df.rename(columns=rename_columns)
-    print('Colunas padronizadas')
+    print('Step 2/4 - Colunas padronizadas')
 except Exception as standardize_columns_error:
     print('{}: Erro ao padronizar colunas. Erro tipo 002.'.format(standardize_columns_error))
 
@@ -121,7 +121,7 @@ try:
     df['cc_to_income_ratio'] = df['cc_avg'] / df['income']
     df['debt_to_income_ratio'] = (df['cc_avg'] + df['mortgage']) / df['income']
     df['financial_maturity_index'] = (df['income'] / df['cc_avg'])
-    print('Novas features adicionadas.')
+    print('Step 3/4 - Novas features adicionadas.')
 except Exception as feature_eng_error:
     print('{}: Ocorreu um erro ao criar novas features. Erro tipo 003.'.format(feature_eng_error))
 
@@ -129,7 +129,7 @@ except Exception as feature_eng_error:
 try:
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
     df.dropna(inplace=True)
-    print('Não há valores infinitos.')
+    print('Step 4/4 - Não há valores infinitos.')
 except Exception as inf_error:
     print('{}: Ocorreu um erro ao tratar os valores tendendo ao infinito. Erro tipo 004.'.format(inf_error))
 
