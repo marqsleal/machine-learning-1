@@ -6,6 +6,9 @@
 
 Dockerfile
 
+# for preprod
+feature_engineer/
+
 # vim
 *.swp
 *.swo
