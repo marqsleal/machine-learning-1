@@ -114,6 +114,17 @@ def age_bracket_credit_expected(age_bracket: int) -> int:
         return 750
 
 
+def experience_bracket(experience: int) -> int:
+    if experience >= 40:
+        return 4
+    elif experience >= 30:
+        return 3
+    elif experience >= 10:
+        return 2    
+    else:
+        return 1
+
+
 try:
     df['age_bracket'] = df['age'].apply(age_bracket)
     df['age_bracket_name'] = df['age_bracket'].apply(age_bracket_str)
@@ -121,9 +132,12 @@ try:
     df['cc_to_income_ratio'] = df['cc_avg'] / df['income']
     df['debt_to_income_ratio'] = (df['cc_avg'] + df['mortgage']) / df['income']
     df['financial_maturity_index'] = (df['income'] / df['cc_avg'])
+    df['experience_bracket'] = df['experience'].apply(experience_bracket)
     print('Step 3/4 - Novas features adicionadas.')
 except Exception as feature_eng_error:
     print('{}: Ocorreu um erro ao criar novas features. Erro tipo 003.'.format(feature_eng_error))
+
+    
 
 # step-4: to treat infinity values
 try:
@@ -133,5 +147,10 @@ try:
 except Exception as inf_error:
     print('{}: Ocorreu um erro ao tratar os valores tendendo ao infinito. Erro tipo 004.'.format(inf_error))
 
-# step-5: saving data with new features
+# step-5: lean on dataset
+df_lean = df[['age', 'experience', 'age_bracket', 'experience_bracket', 'income', 'family',
+       'education', 'mortgage', 'personal_loan', 'securities_account',
+       'cd_account', 'online', 'credit_card', 'cc_avg']].copy()
+
+# step-6: saving data with new features
 df.to_csv('data/feature_store/data_with_new_features.csv', index=False)
