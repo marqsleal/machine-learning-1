@@ -41,7 +41,7 @@ import numpy as np
 
 try:
     df = pd.read_csv('data/external/bankloan.csv')
-    print('Step 1/4 - Dados carregados com sucesso.')
+    print('Step 1/5 - Dados carregados com sucesso.')
 except Exception as load_error:
     print('{}: Erro ao caregar os dados. Erro tipo 001.'.format(load_error))
 
@@ -66,7 +66,7 @@ try:
                     }
 
     df = df.rename(columns=rename_columns)
-    print('Step 2/4 - Colunas padronizadas')
+    print('Step 2/5 - Colunas padronizadas')
 except Exception as standardize_columns_error:
     print('{}: Erro ao padronizar colunas. Erro tipo 002.'.format(standardize_columns_error))
 
@@ -125,6 +125,15 @@ def experience_bracket(experience: int) -> int:
         return 1
 
 
+def renaming(degree: int) -> str:
+    if degree == 1:
+        return 'high school'
+    elif degree == 2:
+        return 'college'
+    else:
+        return 'postgraduate'
+    
+
 try:
     df['age_bracket'] = df['age'].apply(age_bracket)
     df['age_bracket_name'] = df['age_bracket'].apply(age_bracket_str)
@@ -133,7 +142,8 @@ try:
     df['debt_to_income_ratio'] = (df['cc_avg'] + df['mortgage']) / df['income']
     df['financial_maturity_index'] = (df['income'] / df['cc_avg'])
     df['experience_bracket'] = df['experience'].apply(experience_bracket)
-    print('Step 3/4 - Novas features adicionadas.')
+    df['education_degree'] = df['education'].apply(renaming)
+    print('Step 3/5 - Novas features adicionadas.')
 except Exception as feature_eng_error:
     print('{}: Ocorreu um erro ao criar novas features. Erro tipo 003.'.format(feature_eng_error))
 
@@ -143,14 +153,15 @@ except Exception as feature_eng_error:
 try:
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
     df.dropna(inplace=True)
-    print('Step 4/4 - Não há valores infinitos.')
+    print('Step 4/5 - Não há valores infinitos.')
 except Exception as inf_error:
     print('{}: Ocorreu um erro ao tratar os valores tendendo ao infinito. Erro tipo 004.'.format(inf_error))
 
 # step-5: lean on dataset
 df_lean = df[['age', 'experience', 'age_bracket', 'experience_bracket', 'income', 'family',
-       'education', 'mortgage', 'personal_loan', 'securities_account',
+       'education_degree', 'mortgage', 'personal_loan', 'securities_account',
        'cd_account', 'online', 'credit_card', 'cc_avg']].copy()
 
 # step-6: saving data with new features
 df.to_csv('data/feature_store/data_with_new_features.csv', index=False)
+print('Step 5/5 - Dados salvos.')
