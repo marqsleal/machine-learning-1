@@ -7,7 +7,7 @@
 Dockerfile
 
 # for preprod
-# feature_engineer/
+feature_engineer/
 
 # vim
 *.swp
