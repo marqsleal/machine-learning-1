@@ -10,7 +10,7 @@ Passos do pré-processamento:
    - O DataFrame é dividido em dois conjuntos: `df_numerical` contendo variáveis numéricas e `df_categorical` contendo variáveis categóricas.
 
 3. Pré-processamento:
-   - Uma transformação logarítmica é aplicada à coluna 'mortgage' utilizando a função `np.log1p` para evitar problemas com valores nulos ou zero.
+   - Uma transformação logarítmica é aplicada à coluna 'mortgage' utilizando a função `np.log1p` para tratamento de outliers.
    - As variáveis categóricas 'age_bracket_name' e 'education' são codificadas usando o `OneHotEncoder` do `sklearn`, com o parâmetro `handle_unknown='ignore'` para lidar com valores desconhecidos durante a transformação.
 
 4. Concatação e salvamento:
