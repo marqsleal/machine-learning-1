@@ -8,6 +8,7 @@ Dockerfile
 
 # for preprod
 feature_engineer/
+src/models/preprocess.py
 
 # vim
 *.swp
