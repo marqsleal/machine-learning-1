@@ -2,20 +2,19 @@
 
 O pipeline segue as etapas do ciclo de vida de um modelo de Machine Learning: **Preparação dos Dados**, **Treinamento do Modelo**, **Implantação** e **Monitoramento**. Abaixo estão as ferramentas e as etapas implementadas em cada fase do pipeline.
 
-![alt text](docs/mlops.png)
+![alt text](docs/mlops_0.png)
 
 ---
 
 ## Tecnologias Utilizadas
 
 - **Cloud**: Google Cloud Platform (GCP)
-- **Containerização**: Docker e Docker Compose
-- **CI/CD**: Github Actions com cd4ml para automação de deploys
+- **Containerização**: Docker
+- **CI/CD**: Github Actions
 - **Gerenciamento de Ciclo de Vida do Modelo**: MLflow
 - **API**: FastAPI para servir o modelo
 - **Monitoramento**: Google Cloud Observability Monitoring
-- **Linguagens**: Python, SQL e YAML
-- **Banco de Dados**: Cloud SQL (GCP)
+- **Linguagens**: Python e YAML
 - **Implantação**: Cloud Run (GCP)
 
 ---
@@ -24,9 +23,8 @@ O pipeline segue as etapas do ciclo de vida de um modelo de Machine Learning: **
 
 ### 1. **Preparação dos Dados**
 
-   - **Armazenamento de Dados**: Os dados brutos e transformados serão armazenados no Cloud Storage (GCP).
-   - **Banco de Dados**: Utilizaremos o **Cloud SQL** para armazenar dados organizados, incluindo features de treinamento e logs de inferências.
-   - **Scripts de ETL**: Scripts em **Python** e **SQL** para a transformação e engenharia de features.
+   - **Coleta de Dados**: Utilizaremos um dataset do **Kaggle**.
+   - **Pipeline de dados**: Scripts em **Python** para a transformação e engenharia de features.
 
 ### 2. **Treinamento do Modelo**
 
@@ -34,7 +32,7 @@ O pipeline segue as etapas do ciclo de vida de um modelo de Machine Learning: **
    - **Gerenciamento com MLflow**:
       - **Experimentos e Versionamento**: Utilizaremos o MLflow para rastrear experimentos e resultados, além de versionar o modelo com métricas de avaliação.
       - **Salvamento e Rastreabilidade**: Cada modelo será salvo com artefatos completos para garantir reprodutibilidade.
-   - **Armazenamento de Modelos**: Modelos treinados serão salvos no MLflow e no Cloud Storage para serem usados no deploy.
+   - **Armazenamento de Modelos**: Modelos treinados serão salvos no MLflow para serem usados no deploy.
 
 ### 3. **Pipeline de CI/CD com Github Actions**
 
@@ -53,7 +51,6 @@ O pipeline segue as etapas do ciclo de vida de um modelo de Machine Learning: **
 
    - **Google Cloud Monitoring**:
       - **Logs e Métricas**: o Google Cloud Monitoring será estará configurado para coletar logs, métricas e dados de uso da API em tempo real.
-      - **Alertas (opcional)**: Configurar alertas automáticos para detectar anomalias ou falhas de desempenho.
    - **Monitoramento de Métricas do Modelo**:
       - Usaremos o MLflow para rastrear métricas contínuas de desempenho do modelo. Essas métricas serão armazenadas e monitoradas para identificar a degradação do modelo.
 
@@ -63,16 +60,27 @@ O pipeline segue as etapas do ciclo de vida de um modelo de Machine Learning: **
 
 
 ```
-root-directory
+.
 ├── data
 │   ├── external
-│   ├── feature-store
+│   ├── feature_store
 │   └── processed
+├── Dockerfile
 ├── docs
+│   ├── mlops_0.png
+│   └── mlops.png
+├── env
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── lib64 -> lib
+│   ├── pyvenv.cfg
+│   └── share
 ├── Instruções.md
 ├── pipeline.md
 ├── README.md
 ├── reports
+│   └── plots
 ├── requirements.txt
 └── src
     ├── models
