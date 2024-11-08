@@ -54,7 +54,7 @@ except Exception as split_df_error:
 
 # step-3: preprocess
 try:
-    df_categorical['mortgage_log'] = np.log1p(df['mortgage'])
+    df_numerical['mortgage_log'] = np.log1p(df['mortgage'])
     encoder = OneHotEncoder(handle_unknown='ignore')
     X_encoded = encoder.fit_transform(df[['age_bracket_name', 'education']])
     print('Dados pré-processados com sucesso')
@@ -69,7 +69,9 @@ try:
     df_numerical.reset_index(drop=True, inplace=True)
 
     df_preprocessed = pd.concat([df_categorical, df_numerical, df_encoded], axis=1)
-    df_preprocessed.to_csv('data/preprocessed/preprocessed_data', index=False)
+    df_preprocessed.to_csv('data/preprocessed/preprocessed_data.csv', index=False)
+    df_categorical.to_csv('data/preprocessed/cat.csv', index=False)
+    df_numerical.to_csv('data/preprocessed/num.csv', index=False)
     print('Dados salvos com sucesso')
 except FileNotFoundError as save_error:
     print('{}: Ocorreu um erro ao salvar o arquivo. Verifique o caminho do diretório'.format(save_error))
