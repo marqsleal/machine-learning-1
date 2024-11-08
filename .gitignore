@@ -4,10 +4,10 @@
 # Mac OS-specific storage files
 .DS_Store
 
-Dockerfile
+# ci/cd triggers
+.github/workflows/cloud-run.yaml
 
-# for preprod
-feature_engineer/
+
 
 # vim
 *.swp
