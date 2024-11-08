@@ -2,7 +2,7 @@
 
 O pipeline segue as etapas do ciclo de vida de um modelo de Machine Learning: **Preparação dos Dados**, **Treinamento do Modelo**, **Implantação** e **Monitoramento**. Abaixo estão as ferramentas e as etapas implementadas em cada fase do pipeline.
 
-![alt text](docs/mlops_0.png)
+![alt text](docs/architecture.png)
 
 ---
 
