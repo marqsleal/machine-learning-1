@@ -50,4 +50,77 @@ O setor de crédito apresenta um risco significativo para instituições finance
 
 3. **Melhorar o Processo de Avaliação de Crédito**: Automatizar o processo de análise de crédito com base em dados históricos e algoritmos preditivos, permitindo decisões mais rápidas e embasadas para aprovação de crédito.
 
+### Feature Engineering
+
+Foram criadas novas features, mas no sentido de analisar dados. Não usaremos todas essas features novas para evitar a multicolinearidade. Mas criamos uma feature para categorizar idades, chamda 'age_bracket_name'.
+
+```
+Column name:age_bracket_name
+Generation X    2029
+Millennials     1907
+Baby boomers     788
+Generation Z     170
+Name: count, dtype: int64
+```
+
+### Pré-processamento
+
+##### Features Numéricas
+
+**Analisando Outliers**
+
+A coluna 'mortgage' se destacou na analise com z score. Vamos tratar usando transformação logaritmica, pois ajuda a estabilizar a variância e consegue deixar a distribuição um pouco mais parecida com um 'sino' quando visualizamos um histograma.
+
+$x′=log(x+1)$
+
+Vemos também que nessa coluna há vários individuos que não tem hipotecas (valores = 0.00).
+
+**Sobre a multicolinearidade**
+
+As colunas 'age' e 'experience' apresentaram multicolinearidade alta, então teremos que remover uma delas.
+
+
+*Flags*
+> 0: Não preocupa
+
+> 1: Moderada com ponto de **atenção!**
+
+> 2: Alta
+
+```
+age: VIF = 42.99 (2)
+experience: VIF = 21.50 (2)
+income: VIF = 3.73 (0)
+family: VIF = 5.50 (1)
+mortgage: VIF = 1.37 (0)
+```
+
+##### Visualizações
+
+Idade
+
+![alt text](reports/plots/age_dist.png)
+
+Renda
+
+![alt text](reports/plots/income_dist.png)
+
+Hipotecas
+
+![alt text](reports/plots/mortgage_dist.png)
+
+Hipotecas pré-processada
+
+![alt text](reports/plots/log_mortgage_dist.png)
+
+##### Features Categóricas
+
+As únicas features categóricas que precisamos pré-processar foram 'age_bracket_name' e 'education', nas quais utilizamos One-hot Enconder.
+
+Os dados prontos para treinamento estão salvos em seus devidos diretórios.
+
+### Monitoramento
+
+Implementamos monitoramento de métricas e análises em produção também, que pode ser encontrado na branch *preprod*, dentro do diretório *src*.
+
 Autores: Mille, Mileno, Maria, Gabriel, Juan
