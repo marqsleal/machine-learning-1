@@ -9,6 +9,8 @@
 
 Este projeto visa desenvolver um sistema preditivo para auxiliar na avaliação de crédito. Utilizando algoritmos de Machine Learning, o projeto tem dois objetivos principais: prever o score de crédito de um cliente, em um problema de regressão, e construir um modelo de classificação para determinar a aprovação ou não de crédito para clientes específicos. Este projeto pode ajudar a tomar decisões mais rápidas e assertivas, reduzindo o risco de inadimplência e otimizando a alocação de crédito.
 
+![alt text](docs/mlops_0.png)
+
 ### O Conjunto de Dados
 
 Os dados consistem em informações pessoais e financeiras dos clientes, detalhando características relevantes para avaliação de crédito. As principais colunas dos dados incluem:
