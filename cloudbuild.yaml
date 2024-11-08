@@ -1,0 +1,14 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '--build-arg', 'PROJECT_ID=${{ secrets.PROJECT_ID }}',
+      '--build-arg', 'SERVICE_NAME=credit-system',
+      '-t', '${_IMAGE_TAG}',
+      '.'
+    ]
+
+images:
+  - '${_IMAGE_TAG}'
+
+logsBucket: 'gs://credit-logs-mle'
