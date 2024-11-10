@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/907665342862090684/265526866ed04ce1a71d4fd3dc862944/artifacts
+end_time: 1731272792124
+entry_point_name: ''
+experiment_id: '907665342862090684'
+lifecycle_stage: active
+run_id: 265526866ed04ce1a71d4fd3dc862944
+run_name: RandomSearchCV_KNeighborsClassifier
+run_uuid: 265526866ed04ce1a71d4fd3dc862944
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731272779315
+status: 3
+tags: []
+user_id: marqsleal

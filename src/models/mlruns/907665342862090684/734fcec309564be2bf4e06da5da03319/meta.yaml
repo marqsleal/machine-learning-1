@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/907665342862090684/734fcec309564be2bf4e06da5da03319/artifacts
+end_time: 1731272577957
+entry_point_name: ''
+experiment_id: '907665342862090684'
+lifecycle_stage: active
+run_id: 734fcec309564be2bf4e06da5da03319
+run_name: exultant-lynx-125
+run_uuid: 734fcec309564be2bf4e06da5da03319
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731272546281
+status: 3
+tags: []
+user_id: marqsleal
