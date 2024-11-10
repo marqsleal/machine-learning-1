@@ -28,8 +28,6 @@ Notas:
 
 import pandas as pd
 import numpy as np
-import scipy.stats as stats
-from statsmodels.stats.outliers_influence import variance_inflation_factor
 from sklearn.preprocessing import OneHotEncoder
 
 # step-1: load data
