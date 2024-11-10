@@ -1,0 +1,15 @@
+digest: 682d9ce7
+name: dataset
+profile: '{"num_rows": 3500, "num_elements": 42000}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "age", "required": true}, {"type":
+  "long", "name": "experience", "required": true}, {"type": "long", "name": "income",
+  "required": true}, {"type": "long", "name": "zip_code", "required": true}, {"type":
+  "long", "name": "family", "required": true}, {"type": "double", "name": "cc_avg",
+  "required": true}, {"type": "long", "name": "education", "required": true}, {"type":
+  "long", "name": "mortgage", "required": true}, {"type": "long", "name": "personal_loan",
+  "required": true}, {"type": "long", "name": "securities_account", "required": true},
+  {"type": "long", "name": "cd_account", "required": true}, {"type": "long", "name":
+  "online", "required": true}]}'
+source: '{"tags": {"mlflow.user": "marqsleal", "mlflow.source.name": "/home/marqsleal/Dev/Python/ml-projeto-final/venv/lib/python3.12/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

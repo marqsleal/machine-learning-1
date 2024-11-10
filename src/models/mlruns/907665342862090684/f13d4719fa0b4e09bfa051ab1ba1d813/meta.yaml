@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/907665342862090684/f13d4719fa0b4e09bfa051ab1ba1d813/artifacts
+end_time: 1731272537278
+entry_point_name: ''
+experiment_id: '907665342862090684'
+lifecycle_stage: active
+run_id: f13d4719fa0b4e09bfa051ab1ba1d813
+run_name: bold-mare-807
+run_uuid: f13d4719fa0b4e09bfa051ab1ba1d813
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731272504947
+status: 3
+tags: []
+user_id: marqsleal
