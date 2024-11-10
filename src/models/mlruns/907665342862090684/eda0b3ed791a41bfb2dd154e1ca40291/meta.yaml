@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/907665342862090684/eda0b3ed791a41bfb2dd154e1ca40291/artifacts
+end_time: 1731272778994
+entry_point_name: ''
+experiment_id: '907665342862090684'
+lifecycle_stage: active
+run_id: eda0b3ed791a41bfb2dd154e1ca40291
+run_name: unequaled-rook-582
+run_uuid: eda0b3ed791a41bfb2dd154e1ca40291
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731272578681
+status: 3
+tags: []
+user_id: marqsleal
