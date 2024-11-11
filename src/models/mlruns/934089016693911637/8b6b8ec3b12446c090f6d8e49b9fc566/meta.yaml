@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/934089016693911637/8b6b8ec3b12446c090f6d8e49b9fc566/artifacts
+end_time: 1731349269921
+entry_point_name: ''
+experiment_id: '934089016693911637'
+lifecycle_stage: active
+run_id: 8b6b8ec3b12446c090f6d8e49b9fc566
+run_name: AdaBoostClassifier-CreditApproval
+run_uuid: 8b6b8ec3b12446c090f6d8e49b9fc566
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731349267710
+status: 3
+tags: []
+user_id: juanvieira

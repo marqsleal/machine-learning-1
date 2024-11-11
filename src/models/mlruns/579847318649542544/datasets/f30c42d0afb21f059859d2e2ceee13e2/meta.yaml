@@ -1,0 +1,19 @@
+digest: 9c37729c
+name: dataset
+profile: '{"num_rows": 1469, "num_elements": 22035}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "personal_loan", "required":
+  true}, {"type": "long", "name": "securities_account", "required": true}, {"type":
+  "long", "name": "cd_account", "required": true}, {"type": "long", "name": "online",
+  "required": true}, {"type": "double", "name": "num__age", "required": false}, {"type":
+  "double", "name": "num__income", "required": false}, {"type": "double", "name":
+  "num__family", "required": false}, {"type": "double", "name": "num__mortgage", "required":
+  false}, {"type": "double", "name": "cat__age_bracket_name_Baby boomers", "required":
+  false}, {"type": "double", "name": "cat__age_bracket_name_Generation X", "required":
+  false}, {"type": "double", "name": "cat__age_bracket_name_Generation Z", "required":
+  false}, {"type": "double", "name": "cat__age_bracket_name_Millennials", "required":
+  false}, {"type": "double", "name": "cat__education_ensino_medio", "required": false},
+  {"type": "double", "name": "cat__education_ensino_superior", "required": false},
+  {"type": "double", "name": "cat__education_pos_graduacao", "required": false}]}'
+source: '{"tags": {"mlflow.user": "juanvieira", "mlflow.source.name": "src/models/train.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "3cb28f8fd1e09b0bf4792d5d4d6d26d24beb25ad"}}'
+source_type: code

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/748753631065908979/a73e1aa8f2b9493995a451016644099e/artifacts
+end_time: 1731358165091
+entry_point_name: ''
+experiment_id: '748753631065908979'
+lifecycle_stage: active
+run_id: a73e1aa8f2b9493995a451016644099e
+run_name: XGBClassifier-CreditApproval
+run_uuid: a73e1aa8f2b9493995a451016644099e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731358162544
+status: 3
+tags: []
+user_id: juanvieira

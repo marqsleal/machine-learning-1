@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/579847318649542544
+creation_time: 1731355745257
+experiment_id: '579847318649542544'
+last_update_time: 1731355745257
+lifecycle_stage: active
+name: rf-classifier

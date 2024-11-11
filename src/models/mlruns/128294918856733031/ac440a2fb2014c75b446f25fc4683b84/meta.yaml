@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/128294918856733031/ac440a2fb2014c75b446f25fc4683b84/artifacts
+end_time: 1731351540203
+entry_point_name: ''
+experiment_id: '128294918856733031'
+lifecycle_stage: active
+run_id: ac440a2fb2014c75b446f25fc4683b84
+run_name: RandomForestClassifier-CreditApproval
+run_uuid: ac440a2fb2014c75b446f25fc4683b84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731351536996
+status: 3
+tags: []
+user_id: juanvieira

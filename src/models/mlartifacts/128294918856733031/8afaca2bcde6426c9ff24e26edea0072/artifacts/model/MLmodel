@@ -1,0 +1,38 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.17.2
+model_size_bytes: 29457
+model_uuid: 5dd661aecd1e42a78f8ae5d8a5e0fe8c
+run_id: 8afaca2bcde6426c9ff24e26edea0072
+signature:
+  inputs: '[{"type": "double", "name": "num__age", "required": true}, {"type": "double",
+    "name": "num__income", "required": true}, {"type": "double", "name": "num__family",
+    "required": true}, {"type": "double", "name": "num__mortgage", "required": true},
+    {"type": "double", "name": "cat__age_bracket_name_Baby boomers", "required": true},
+    {"type": "double", "name": "cat__age_bracket_name_Generation X", "required": true},
+    {"type": "double", "name": "cat__age_bracket_name_Generation Z", "required": true},
+    {"type": "double", "name": "cat__age_bracket_name_Millennials", "required": true},
+    {"type": "double", "name": "cat__education_ensino_medio", "required": true}, {"type":
+    "double", "name": "cat__education_ensino_superior", "required": true}, {"type":
+    "double", "name": "cat__education_pos_graduacao", "required": true}, {"type":
+    "double", "name": "cat__securities_account_0", "required": true}, {"type": "double",
+    "name": "cat__securities_account_1", "required": true}, {"type": "double", "name":
+    "cat__cd_account_0", "required": true}, {"type": "double", "name": "cat__cd_account_1",
+    "required": true}, {"type": "double", "name": "cat__online_0", "required": true},
+    {"type": "double", "name": "cat__online_1", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-11-11 18:57:44.407242'

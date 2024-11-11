@@ -1,5 +1,5 @@
 import mlflow
-logged_model = 'src/models/mlartifacts/700678007511616763/48ffe9140fe84fd6ab247b80bce57ad2/artifacts/model'
+logged_model = 'src/models/mlartifacts/748753631065908979/05ca3b89e6bb461084eb01860798b4c4/artifacts/model'
 
 # Load model as a PyFuncModel.
 loaded_model = mlflow.pyfunc.load_model(logged_model)
@@ -7,12 +7,13 @@ loaded_model = mlflow.pyfunc.load_model(logged_model)
 # Predict on a Pandas DataFrame.
 import pandas as pd
 
-data = pd.read_csv('data/preprocessed/preprocessed_data.csv')
-features = ['personal_loan', 'education', 'securities_account',
-            'cd_account', 'online', 'age_bracket_name_Baby boomers',
-            'age_bracket_name_Generation X', 'age_bracket_name_Generation Z',
-            'age_bracket_name_Millennials', 'education_1', 'education_2',
-            'education_3']
+data = pd.read_csv('data/preprocessed/preprocessed_data_combined.csv')
+
+features = ['personal_loan','securities_account','cd_account','online',
+            'cat__age_bracket_name_Baby boomers','cat__age_bracket_name_Generation X',
+            'cat__age_bracket_name_Generation Z','cat__age_bracket_name_Millennials',
+            'cat__education_ensino_medio','cat__education_ensino_superior',
+            'cat__education_pos_graduacao']
 
 predicted = loaded_model.predict(data[features])
 
