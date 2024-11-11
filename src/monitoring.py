@@ -34,6 +34,11 @@ xgb_model = xgboost.XGBClassifier(**xgb_params)
 xgb_model.fit(X_train, y_train)
 y_pred_xgb = xgb_model.predict(X_test)
 
+X = X.fillna(X.mean())
+X = X.dropna()
+
+X = X.replace([np.inf, -np.inf], np.nan).fillna(X.mean())
+
 class Monitor:
     @staticmethod
     def outliers_analysis(dataframe):
@@ -69,12 +74,12 @@ ax.set_title("VIF por Feature")
 st.pyplot(fig)
 
 st.subheader("Relatório de Classificação")
-classif_report = classification_report(y_test, y_pred, output_dict=True)
+classif_report = classification_report(y_test, y_pred_xgb, output_dict=True)
 report_df = pd.DataFrame(classif_report).transpose()
 st.write(report_df)
 
 st.subheader("Matriz de Confusão")
-conf_matrix = confusion_matrix(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred_xgb)
 fig, ax = plt.subplots()
 sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues", ax=ax)
 ax.set_title("Matriz de Confusão")
