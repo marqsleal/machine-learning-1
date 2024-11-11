@@ -9,7 +9,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
   RUN_REGION: us-central1
-  SERVICE_NAME: credit-system
+  SERVICE_NAME: credit_system
 
 jobs:
   setup-build-deploy:
@@ -49,8 +49,8 @@ jobs:
     - name: Submit build to Cloud Build
       run: |
         gcloud builds submit \
-        --config cloudbuild.yaml \
-        --substitutions _IMAGE_TAG="gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
+          --config cloudbuild.yaml \
+          --substitutions="_IMAGE_TAG=gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
 
     - name: Deploy to Cloud Run
       run: |-
