@@ -74,18 +74,3 @@ ax.set_title("Matriz de Confusão")
 ax.set_xlabel("Predito")
 ax.set_ylabel("Verdadeiro")
 st.pyplot(fig)
-
-
-'''
-Exemplo de uso das funções
-df = seu DataFrame de dados
-monitor = DataMonitor()
-outliers = monitor.outliers_analysis(df)
-vif = monitor.multicolinearity_analysis(df)
-
-print("Análise de Outliers:")
-print(outliers)
-print("\nAnálise de Multicolinearidade (VIF):")
-print(vif)
-'''
-
