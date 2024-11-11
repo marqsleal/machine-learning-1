@@ -46,11 +46,9 @@ O setor de crédito apresenta um risco significativo para instituições finance
 
 ### Objetivos
 
-1. **Prever o Score de Crédito**: Desenvolver um modelo de regressão que preveja o score de crédito dos clientes, levando em conta variáveis demográficas e financeiras. O objetivo é fornecer uma estimativa do score para clientes atuais e potenciais.
+1. **Decidir a Aprovação de Crédito**: Desenvolver um modelo de classificação que determine se um cliente deve ou não receber aprovação de crédito. Esse modelo será alimentado pelo score de crédito previsto e outras variáveis relevantes.
 
-2. **Decidir a Aprovação de Crédito**: Desenvolver um modelo de classificação que determine se um cliente deve ou não receber aprovação de crédito. Esse modelo será alimentado pelo score de crédito previsto e outras variáveis relevantes.
-
-3. **Melhorar o Processo de Avaliação de Crédito**: Automatizar o processo de análise de crédito com base em dados históricos e algoritmos preditivos, permitindo decisões mais rápidas e embasadas para aprovação de crédito.
+2. **Melhorar o Processo de Avaliação de Crédito**: Automatizar o processo de análise de crédito com base em dados históricos e algoritmos preditivos, permitindo decisões mais rápidas e embasadas para aprovação de crédito.
 
 ### Feature Engineering
 
