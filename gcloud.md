@@ -61,7 +61,7 @@ bindings:
 etag: xxxxxxx=
 version: 1
 
-
+Create Bucket for logs
 ```
 gsutil mb -l us-central1 gs://credit-logs-mle
 ```
