@@ -59,4 +59,5 @@ jobs:
           --platform managed \
           --region "$RUN_REGION" \
           --allow-unauthenticated \
+          --timeout=300s \
           --quiet \
