@@ -3,29 +3,36 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.ensemble import RandomForestClassifier
+import xgboost
 from sklearn.model_selection import train_test_split
 import numpy as np
 import scipy.stats as stats
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 
-data = pd.read_csv('data/preprocessed/preprocessed_data.csv')
-data_target = pd.read_csv('data/feature_store/data_with_new_features.csv')
+data = pd.read_csv('data/preprocessed/preprocessed_data_combined.csv')
 
-features = ['personal_loan', 'education', 'securities_account',
-            'cd_account', 'online', 'age_bracket_name_Baby boomers',
-            'age_bracket_name_Generation X', 'age_bracket_name_Generation Z',
-            'age_bracket_name_Millennials', 'education_1', 'education_2',
-            'education_3']
+features = ['personal_loan','securities_account','cd_account','online',
+            'cat__age_bracket_name_Baby boomers','cat__age_bracket_name_Generation X',
+            'cat__age_bracket_name_Generation Z','cat__age_bracket_name_Millennials',
+            'cat__education_ensino_medio','cat__education_ensino_superior',
+            'cat__education_pos_graduacao']
 
-X, y = data[features], data_target['credit_card']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+X, y = data[features], data['credit_card']
 
-rf_params = {'n_estimators': 100, 'criterion': 'entropy', 'max_depth': 5}
-rf_model = RandomForestClassifier(**rf_params)
-rf_model.fit(X_train, y_train)
-y_pred = rf_model.predict(X_test)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.3,
+    random_state=42
+)
+
+xgb_params = {'learning_rate': 0.01,
+                'max_depth': 3,
+                'n_estimators': 100}
+
+xgb_model = xgboost.XGBClassifier(**xgb_params)
+xgb_model.fit(X_train, y_train)
+y_pred_xgb = xgb_model.predict(X_test)
 
 class Monitor:
     @staticmethod
