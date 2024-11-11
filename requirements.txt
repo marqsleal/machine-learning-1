@@ -62,6 +62,7 @@ protobuf==5.28.3
 psutil==6.1.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
+pyaml==24.9.0
 pyarrow==17.0.0
 pyasn1==0.6.1
 pyasn1_modules==0.4.1
@@ -75,6 +76,8 @@ pyzmq==26.2.0
 requests==2.32.3
 rsa==4.9
 scikit-learn==1.5.2
+scikit-opt==0.6.6
+scikit-optimize==0.10.2
 scipy==1.14.1
 seaborn==0.13.2
 six==1.16.0
