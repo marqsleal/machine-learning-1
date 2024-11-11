@@ -46,11 +46,9 @@ O setor de crédito apresenta um risco significativo para instituições finance
 
 ### Objetivos
 
-1. **Prever o Score de Crédito**: Desenvolver um modelo de regressão que preveja o score de crédito dos clientes, levando em conta variáveis demográficas e financeiras. O objetivo é fornecer uma estimativa do score para clientes atuais e potenciais.
+1. **Decidir a Aprovação de Crédito**: Desenvolver um modelo de classificação que determine se um cliente deve ou não receber aprovação de crédito. Esse modelo será alimentado pelo score de crédito previsto e outras variáveis relevantes.
 
-2. **Decidir a Aprovação de Crédito**: Desenvolver um modelo de classificação que determine se um cliente deve ou não receber aprovação de crédito. Esse modelo será alimentado pelo score de crédito previsto e outras variáveis relevantes.
-
-3. **Melhorar o Processo de Avaliação de Crédito**: Automatizar o processo de análise de crédito com base em dados históricos e algoritmos preditivos, permitindo decisões mais rápidas e embasadas para aprovação de crédito.
+2. **Melhorar o Processo de Avaliação de Crédito**: Automatizar o processo de análise de crédito com base em dados históricos e algoritmos preditivos, permitindo decisões mais rápidas e embasadas para aprovação de crédito.
 
 ### Feature Engineering
 
@@ -121,8 +119,17 @@ As únicas features categóricas que precisamos pré-processar foram 'age_bracke
 
 Os dados prontos para treinamento estão salvos em seus devidos diretórios.
 
+### Experimentações
+
+Nosso protótipo foi treinado e registramos os experimentos no MLflow. O melhor modelo até então foi o RandomForestClassifier e usamos alguns otimizadores para procurar os melhores parâmetros. O BayasianSearchCV encontrou bons hiperparâmetros. Tais quais n_estimators=100, max_depth=5, criterion='entropy'. Os resultados foram satisfatórios. Atingimos uma acurácia de ~73% e ainda há espaço para melhorias.
+
+### Deploy
+
+Para uma melhor implementação, estamos utilizando esteira CI/CD no Github Actions. A melhor combinação possível para automação de deploy para projetos de machine learning: Github Actions + Cloud Run. Essa dobradinha tornou possível o CT: continuous trainning. Agora é só melhorar o modelo e trocar no código. O deploy será feito em ~4 minutos. Isso tudo garante reprodutibilidade.
+
 ### Monitoramento
 
-Implementamos monitoramento de métricas e análises em produção também, que pode ser encontrado na branch *preprod*, dentro do diretório *src*.
+Implementamos monitoramento de métricas e análises em produção também, que pode ser encontrado na branch *preprod*, dentro do diretório *src*. 
+Também podemos monitorar através do Google Monitoring, para ver os logs e erros, possíveis falhas que podem acontecer e métricas.
 
 Autores: Mille, Mileno, Maria, Gabriel, Juan
