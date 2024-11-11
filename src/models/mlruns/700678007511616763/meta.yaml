@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/700678007511616763
+creation_time: 1731282352789
+experiment_id: '700678007511616763'
+last_update_time: 1731282352789
+lifecycle_stage: active
+name: best-model-prototype
