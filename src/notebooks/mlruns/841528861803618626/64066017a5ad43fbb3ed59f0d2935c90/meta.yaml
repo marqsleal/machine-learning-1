@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/64066017a5ad43fbb3ed59f0d2935c90/artifacts
+end_time: 1731280134815
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: 64066017a5ad43fbb3ed59f0d2935c90
+run_name: adorable-bird-434
+run_uuid: 64066017a5ad43fbb3ed59f0d2935c90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280130786
+status: 3
+tags: []
+user_id: juanvieira

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/27e8d7b305424920a579d6d954e52d0f/artifacts
+end_time: 1731280104686
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: 27e8d7b305424920a579d6d954e52d0f
+run_name: RandomSearchCV_GradientBoostingClassifier
+run_uuid: 27e8d7b305424920a579d6d954e52d0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280098442
+status: 3
+tags: []
+user_id: juanvieira

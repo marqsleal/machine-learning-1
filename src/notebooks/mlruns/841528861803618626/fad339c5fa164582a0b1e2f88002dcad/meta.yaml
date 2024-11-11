@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/fad339c5fa164582a0b1e2f88002dcad/artifacts
+end_time: 1731280134815
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: fad339c5fa164582a0b1e2f88002dcad
+run_name: indecisive-owl-828
+run_uuid: fad339c5fa164582a0b1e2f88002dcad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280130786
+status: 3
+tags: []
+user_id: juanvieira

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/6b5a6916cd724f08b9d8c833c0bc5149/artifacts
+end_time: 1731280084004
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: 6b5a6916cd724f08b9d8c833c0bc5149
+run_name: unequaled-calf-674
+run_uuid: 6b5a6916cd724f08b9d8c833c0bc5149
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280078341
+status: 3
+tags: []
+user_id: juanvieira

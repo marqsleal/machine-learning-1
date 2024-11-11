@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/de037420b9c84843a3e2ba1a050e55d1/artifacts
+end_time: 1731280130663
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: de037420b9c84843a3e2ba1a050e55d1
+run_name: receptive-snail-85
+run_uuid: de037420b9c84843a3e2ba1a050e55d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280119704
+status: 3
+tags: []
+user_id: juanvieira

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/c36886aed3bb473bb746768f6208e17d/artifacts
+end_time: 1731280117840
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: c36886aed3bb473bb746768f6208e17d
+run_name: casual-toad-159
+run_uuid: c36886aed3bb473bb746768f6208e17d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280112388
+status: 3
+tags: []
+user_id: juanvieira

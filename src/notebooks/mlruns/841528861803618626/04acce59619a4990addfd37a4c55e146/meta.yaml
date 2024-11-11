@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/04acce59619a4990addfd37a4c55e146/artifacts
+end_time: 1731280084004
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: 04acce59619a4990addfd37a4c55e146
+run_name: silent-ant-642
+run_uuid: 04acce59619a4990addfd37a4c55e146
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280078341
+status: 3
+tags: []
+user_id: juanvieira
