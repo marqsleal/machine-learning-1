@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/b8093f8b5337485d9c096642a2cacd9a/artifacts
+end_time: 1731280110276
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: b8093f8b5337485d9c096642a2cacd9a
+run_name: funny-donkey-479
+run_uuid: b8093f8b5337485d9c096642a2cacd9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280106283
+status: 3
+tags: []
+user_id: juanvieira

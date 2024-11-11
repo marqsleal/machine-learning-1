@@ -1,0 +1,16 @@
+digest: b33a8856
+name: dataset
+profile: '{"num_rows": 3425, "num_elements": 41100}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "personal_loan", "required":
+  true}, {"type": "long", "name": "education", "required": true}, {"type": "long",
+  "name": "securities_account", "required": true}, {"type": "long", "name": "cd_account",
+  "required": true}, {"type": "long", "name": "online", "required": true}, {"type":
+  "double", "name": "age_bracket_name_Baby boomers", "required": true}, {"type": "double",
+  "name": "age_bracket_name_Generation X", "required": true}, {"type": "double", "name":
+  "age_bracket_name_Generation Z", "required": true}, {"type": "double", "name": "age_bracket_name_Millennials",
+  "required": true}, {"type": "double", "name": "education_1", "required": true},
+  {"type": "double", "name": "education_2", "required": true}, {"type": "double",
+  "name": "education_3", "required": true}]}'
+source: '{"tags": {"mlflow.user": "juanvieira", "mlflow.source.name": "/home/juanvieira/local/ml1/env/lib/python3.11/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

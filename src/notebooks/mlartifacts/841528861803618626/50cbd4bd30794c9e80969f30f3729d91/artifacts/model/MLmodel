@@ -1,0 +1,33 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.17.2
+model_size_bytes: 415798
+model_uuid: 4a78ea038a36443eafda6d13832b06c6
+run_id: 50cbd4bd30794c9e80969f30f3729d91
+signature:
+  inputs: '[{"type": "long", "name": "personal_loan", "required": true}, {"type":
+    "long", "name": "education", "required": true}, {"type": "long", "name": "securities_account",
+    "required": true}, {"type": "long", "name": "cd_account", "required": true}, {"type":
+    "long", "name": "online", "required": true}, {"type": "double", "name": "age_bracket_name_Baby
+    boomers", "required": true}, {"type": "double", "name": "age_bracket_name_Generation
+    X", "required": true}, {"type": "double", "name": "age_bracket_name_Generation
+    Z", "required": true}, {"type": "double", "name": "age_bracket_name_Millennials",
+    "required": true}, {"type": "double", "name": "education_1", "required": true},
+    {"type": "double", "name": "education_2", "required": true}, {"type": "double",
+    "name": "education_3", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-11-10 23:08:27.767643'

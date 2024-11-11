@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/bf601a991cb344d799eaeae5e3234ea5/artifacts
+end_time: 1731280417759
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: bf601a991cb344d799eaeae5e3234ea5
+run_name: BayesSearchCVRandomForestClassifier
+run_uuid: bf601a991cb344d799eaeae5e3234ea5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280134977
+status: 3
+tags: []
+user_id: juanvieira

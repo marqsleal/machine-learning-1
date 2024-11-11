@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/a2a90afbca1f4f03af4733f2e12cfab1/artifacts
+end_time: 1731280699367
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: a2a90afbca1f4f03af4733f2e12cfab1
+run_name: BayesSearchCVGradientBoostingClassifier
+run_uuid: a2a90afbca1f4f03af4733f2e12cfab1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280417861
+status: 3
+tags: []
+user_id: juanvieira

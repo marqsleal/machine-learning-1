@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/841528861803618626/0b0754b2d1d64748b9ffaa12cfcaab91/artifacts
+end_time: 1731280117840
+entry_point_name: ''
+experiment_id: '841528861803618626'
+lifecycle_stage: active
+run_id: 0b0754b2d1d64748b9ffaa12cfcaab91
+run_name: invincible-snake-420
+run_uuid: 0b0754b2d1d64748b9ffaa12cfcaab91
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731280112388
+status: 3
+tags: []
+user_id: juanvieira
