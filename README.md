@@ -129,21 +129,25 @@ Uma outra alternativa, caso a fintech queira aumentar a base de clientes e tomar
 
 Análise das Métricas no Contexto de Aprovação de Crédito
 
-    Precision: Essa métrica avalia quantas das aprovações foram de fato corretas, ou seja, quantos dos clientes aprovados realmente eram bons pagadores. Ter uma alta precision indica que você está aprovando crédito principalmente para aqueles que provavelmente irão pagá-lo corretamente.
-        Impacto de alta precision: Menor risco de inadimplência, pois o sistema é mais cuidadoso em aprovar apenas aqueles que têm grande chance de pagar. Isso é ideal para minimizar perdas financeiras diretas.
+Precision: Essa métrica avalia quantas das aprovações foram de fato corretas, ou seja, quantos dos clientes aprovados realmente eram bons pagadores. Ter uma alta precision indica que você está aprovando crédito principalmente para aqueles que provavelmente irão pagá-lo corretamente.
 
-    Recall: Essa métrica mede a proporção de bons pagadores que foram corretamente identificados e aprovados. Um alto recall significa que você está conseguindo captar a maioria dos clientes que realmente merecem o crédito.
-        Impacto de alta recall: Menor chance de perder potenciais bons clientes. Pode ser útil para empresas que buscam maximizar o crescimento da base de clientes, mas que têm uma estratégia para lidar com eventuais inadimplências.
+Impacto de alta precision: Menor risco de inadimplência, pois o sistema é mais cuidadoso em aprovar apenas aqueles que têm grande chance de pagar. Isso é ideal para minimizar perdas financeiras diretas.
+
+Recall: Essa métrica mede a proporção de bons pagadores que foram corretamente identificados e aprovados. Um alto recall significa que você está conseguindo captar a maioria dos clientes que realmente merecem o crédito.
+
+Impacto de alta recall: Menor chance de perder potenciais bons clientes. Pode ser útil para empresas que buscam maximizar o crescimento da base de clientes, mas que têm uma estratégia para lidar com eventuais inadimplências.
 
 Qual Métrica Priorizar?
 
-    Instituições conservadoras e avessas a risco geralmente priorizam precision. Ao focar em aprovar apenas clientes com altas chances de pagamento, reduzem o risco de inadimplência.
-    Instituições com foco em crescimento e dispostas a assumir algum risco podem valorizar mais o recall, para aumentar o número de clientes e captar todos aqueles que possam ser bons pagadores.
+Instituições conservadoras e avessas a risco geralmente priorizam precision. Ao focar em aprovar apenas clientes com altas chances de pagamento, reduzem o risco de inadimplência.
+
+Instituições com foco em crescimento e dispostas a assumir algum risco podem valorizar mais o recall, para aumentar o número de clientes e captar todos aqueles que possam ser bons pagadores.
 
 Exemplo Prático
 
-    Se um erro de aprovação (ou seja, aprovar quem não paga) é muito custoso, a prioridade deve ser aumentar o precision.
-    Se a meta é crescer a base de clientes e uma perda moderada é aceitável, otimizar o recall pode ser mais adequado.
+Se um erro de aprovação (ou seja, aprovar quem não paga) é muito custoso, a prioridade deve ser aumentar o precision.
+
+Se a meta é crescer a base de clientes e uma perda moderada é aceitável, otimizar o recall pode ser mais adequado.
 
 Em resumo, precision geralmente é mais importante em aprovação de crédito devido ao impacto negativo de aprovações incorretas. No entanto, recall pode ser a prioridade para estratégias focadas em crescimento com maior tolerância ao risco.
 
@@ -156,4 +160,14 @@ Para uma melhor implementação, estamos utilizando esteira CI/CD no Github Acti
 Implementamos monitoramento de métricas e análises em produção também, que pode ser encontrado na branch *preprod*, dentro do diretório *src*. 
 Também podemos monitorar através do Google Monitoring, para ver os logs e erros, possíveis falhas que podem acontecer e métricas.
 
-Autores: Mille, Mileno, Maria, Gabriel, Juan
+Autores:
+
+[Gabriel Marques](https://github.com/marqsleal)
+
+[Mille Amorim](https://github.com/4m0r1m)
+
+[Mileno Epifânio](https://github.com/milenoepifanio)
+
+[Maria Paula Andrade](https://github.com/MariaPaulaAndrade)
+
+[Juan Vieira](https://github.com/ju4nv1e1r4)
